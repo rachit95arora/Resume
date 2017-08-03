@@ -1,0 +1,227 @@
+\documentclass{article}
+\usepackage{verbatim}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,    
+  }
+
+\newenvironment{longversion}{}{} % use this to show longversion
+\newenvironment{shortversion}{}{} % use this to show shortversion
+
+\usepackage{changepage}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{sectsty}
+\usepackage[letterpaper,margin=0.6in]{geometry}
+\pagestyle{empty}
+
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+%edit the section font and style
+\sectionfont{\normalfont\sectionrule{0pt}{0pt}{-4pt}{1pt}}
+
+%make all sections cap and first letter capital
+\newcommand{\tmpsection}[1]{}
+\let\tmpsection=\section
+\renewcommand{\section}[1]{\tmpsection*{\textsc{#1}}}
+
+%set the line spacing
+\setstretch{1.10}
+
+
+\begin{document}
+
+\begin{center}
+ {\large \textsc{Rachit Arora} }\\ 
+\begin{tabular}{ l p{4cm} r }
+    & &   \\
+  Computer Science and Engineering & & rachit95arora@gmail.com\\
+  Indian Institute of Technology, Delhi & & \href{http://www.cse.iitd.ac.in/~cs5140292/}{www.cse.iitd.ac.in/$\sim$cs5140292/} \\
+\end{tabular}
+\end{center}
+
+
+\section{Academic Details}
+\begin{center}
+\begin{tabular}{ |c | c | c | c |}
+\hline
+Year & Degree & Institute & CGPA/Percentage \\ 
+\hline
+2014-2019 & Integrated B.Tech and M.Tech in & Indian Institute of Technology & 8.98/10 \\ 
+(Expected) & Computer Science and Engineering & Delhi & \\ 
+\hline
+2014 & Class XII, CBSE & Bal Bharati Public School, Pitampura, New Delhi & 96\% \\ 
+\hline
+2012 & Class X, CBSE & Bal Bharati Public School, Pitampura, New Delhi & 10/10 \\  \hline
+\end{tabular}
+\end{center}
+
+\section{Scholastic Achievements}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item \textbf{IITD Semester Merit Awards} for exceptional academic performance in over three semesters.
+    \item \textbf{Group Mathematics Olympiad :}  Qualified GMO organised by Central Board For Secondary Education (CBSE). One of the six 12th grade students to get selected nationally.  
+    \item \textbf{All India Rank 169} in Indian Institute Of Technology Joint Entrance Examination among a million candidates.
+    \item \textbf{99.9 percentile certificate} in 12th grade national CBSE Mathematics and Chemistry final examinations.
+    \item In the \textbf{top 15 students} selected nationwide for the \textbf{KVPY Fellowship}, 2013 by IISc Bangalore, Govt. of India.
+    \item Selected as a National Talent Search Examination\textbf{ (NTSE)}  Scholar-2010 for being in National top 1000.
+\end{itemize}
+
+
+\section{Internships and Major Projects}
+\begin{list} {\labelitemi}{\leftmargin=0em}
+\setlength{\leftmargin}{0pt}
+\item[]
+  \headerrow
+    {\textbf{Big Data Analysis on company tickets}}
+    {Qubole, Bangalore}
+  \\
+  \headerrow
+    {\emph{Software Engineering Internship}}
+    {\emph{May - July, 2017}}
+      \begin{itemize}
+        \item Analysed company service tickets using the Spark framework on Scala to allow a better insight into the product. 
+        \item The project centered around automatic problem identification in new tickets, understanding product issues\\ and gauging customer satisfaction better.
+        \item The project involved using machine learning techniques like Frequent Pattern Mining, TF-IDF, Bayes Learning, Clustering etc on big data.
+        \item The second leg of the internship was to develop a Cluster Configuration tool in the form of an intuitive web app.
+      \end{itemize}
+
+\item[]
+  \headerrow
+    {\textbf{Exploring ways for efficient huge page management }}
+    {Prof. Sorav Bansal, IIT Delhi}
+  \\
+  \headerrow
+    {\emph{Research Project}}
+    {\emph{July 2017 - Present}}
+      \begin{itemize}
+        \item Huge pages are currently poorly supported for processes in modern operating systems.
+        \item The work is centered around techniques to redesign systems in a manner that allows better utilization\\ of the page continuity of processes in the form of huge pages.
+        \item Ways for efficient access frequency tracking to allow huge page promotion and splitting huge pages\\ to reduce memory bloat and fragmentation.
+        \item The idea boils down to treating memory contiguity as a first class resource allocating huge pages to\\ a process only with some guarantees that the process will best utilize it.
+      \end{itemize}
+
+\item[]
+  \headerrow
+    {\textbf{FPRESSO : A fast automatic FPGA architecture modeling tool}}
+    {Prof. Paolo Ienne, EPFL Switzerland}
+  \\
+  \headerrow
+    {\emph{Summer Research Internship}}
+    {\emph{May - July, 2016}}
+      \begin{itemize}
+        \item Added support for state-of-the-art logic blocks allowing fracturable LUTs.
+        \item Implemented the project in Java which involved designing a suitable data structure for component
+abstraction and designing an algorithm to map architecture delays to modes.
+        \item Modeled area and delay values by deriving the actual hardware architecture for the abstract mode
+description.
+      \end{itemize}
+
+\end{list}
+
+\begin{longversion}
+\end{longversion}
+
+\begin{longversion}
+\section{Other Projects}
+\begin{list} {\labelitemi}{\leftmargin=0em}
+\setlength{\leftmargin}{0pt}
+
+\item[]
+  \headerrow{ \textbf{Bot adversary for the game of Tak}} {Prof. Mausam, Fall 2016}
+  \begin{itemize} \item[]
+  Implemented an AI bot in C++ based on the minimax search with alpha beta pruning. Auto tuned weights by self training and added quiescence search and transposition table to improve performance. The board state was completely represented using 64 bit integers to allow for constant time path calculations using bit manipulation.
+  \end{itemize}
+  
+\item[]
+  \headerrow {\textbf{ Traveling Salesman Problem using Genetic Algorithms}} {Self Project}
+  \begin{itemize} \item[]
+  A C++ implementation of several genetic crossover algorithms like Partially Mapped Crossover (PMX), Cyclic crossover (CX),  Edge Recombination Crossover (ERX) and Greedy crossover (GX) with some heuristics. Mutation to provide soft random restarts on stagnation. Parallelized the implementation using OpenMP to utilize inherent concurrency in the algorithm.
+  \end{itemize}
+
+\item[]
+  \headerrow {\textbf{Network Based Multiplayer Game}} {Prof. Vinay Ribeiro, Spring 2016}
+  \begin{itemize} \item[]
+  Designed a multi-player p2p network based game of ping pong with multiple balls, power-ups and speed-ups using Java Swing library for graphics and UDP sockets for network programming. To maintain seamless continuity of the game during network outages, applied local interpolation in the custom physics engine and made it robust by replacing failed nodes(players) with artificially intelligent bots.
+  \end{itemize}
+  
+\item[]
+  \headerrow{ \textbf{Complaint Management Portal}} {Prof. Vinay Ribeiro, Spring 2016}
+  \begin{itemize} \item[]
+  Designed and developed a full fledged Android application for registering and resolving complaints of campus residents. The back-end was implemented in PHP with a MySQL database. The application supported complaint threads and comments with voting and resolution options and support for independent issue groups.
+  \end{itemize}
+  
+% \item[]
+%   \headerrow{ \textbf{RISC Processor Implementation}} {Prof. Anshul Kumar, Spring 2016}
+%   \begin{itemize} \item[]
+%   Designed a RISC ARM processor with RAM, Register File, ALU and Control in VHDL and ran successful simulations of the design. It involved branch prediction, cache simulation, pipelining and forwarding between different stages.
+%   \end{itemize}
+
+
+\item[]
+  \headerrow {\textbf{Prolog Interpreter in Ocaml}} {Prof. Sanjiva Prasad, Spring 2017}
+  \begin{itemize} \item[]
+  An implementation of the Prolog REPL in Ocaml using Ocamllex for lexer, Ocamlyacc for parser and coding a sigma algebra engine supporting unification and substitution.
+  \end{itemize}
+  
+\end{list}
+\end{longversion}
+
+\begin{longversion}
+\section{Relevant Courses}
+\begin{itemize}
+  \setlength\itemsep{-1em}
+    \item \textbf{Computer Science:} \\
+      Advanced Topics in OS*, Operating Systems, Artificial Intelligence, Machine Learning, Parallel Programming, Computer Networks, Functional Programming*, Digital Image Analysis*, Analysis and Design of Algorithms, Data Structures \& Algorithms, Discrete Mathematical Structures, Programming Languages, Computer Architecture, Design Practices in Computer Science, Logic for Computer Science*, Theory of Computation  \\
+
+    \item \textbf{Mathematics:} \\
+      Calculus, Linear Algebra, Probability \& Stochastic Processes
+\end{itemize}
+\end{longversion}
+
+\begin{longversion}
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Programming Languages:} C,  C++, Java, Ocaml, Scala, Python, JS, SML, Prolog, MySQL, HTML, PHP
+\end{itemize}
+\end{longversion}
+
+\section{Extra Curricular Activities}
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item 2014-2016 : Executive and Marketing Coordinator at ACES-ACM, the ACM student chapter of IIT Delhi
+    \item Freshman Mentor for six IIT Delhi freshman for the year 2016.
+    \item 2014-2016 : Member of the Stree Moderation Team under NSS (National Service Scheme). Stree is an
+organization working to create gender sensitization and awareness among the students of the
+institute and community in general.
+\end{itemize}
+
+\end{document}
